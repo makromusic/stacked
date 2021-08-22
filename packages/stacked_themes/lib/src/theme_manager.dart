@@ -202,6 +202,11 @@ You can supply either a list of ThemeData objects to the themes property or a li
       themeMode: _selectedThemeMode,
     ));
   }
+
+  void injectThemeMode(ThemeMode themeMode) {
+    _selectedThemeMode = themeMode;
+    _sharedPreferences.userThemeMode = themeMode;
+  }
 }
 
 /// Returns the [ThemeManger] that
